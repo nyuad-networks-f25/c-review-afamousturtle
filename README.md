@@ -20,13 +20,29 @@ rather than a strict guided path into c prowess.
 ### Playing around with makefile
 
 1. Run the `make` command. What is the error? What is the fix?
+The main.c file should contain a main function.
+
 2. It is usually NOT a good idea to commit an executable file on git. Why?
 How can you make git ignore the executable you are producing in this repo?
+Computers with different processors compile main.c into different executable files (machines codes).
+touch .gitignore
+
 3. Run `make` twice. What is the inefficiency? What is the fix (at least two possible)?
+Notice the line "main: main.c"
+"main" is the target, while "main.c" is the dependency. You are looking for a file names "main", but there is no such file.
+
 4. From your `main.c` file, print the value of only constant
 defined in `status.h`. What is the error? What is the fix (at least two possible)?
+"bool" is an unknown type in old version of c.
+Fix:
+import the library that defines "bool", <stdbool.h>
+or
+use the new c protocol, c2x
+
 5. Change the value of the constant in `status.h` from `true` to `false`.
 Run `make`. What is the problem? What is the fix?
+Didn't add "status.h" as a dependency file in makefile.
+
 6. Warnings are a great tool to have when programming.
 Enable all the possible warnings you will ever get from your compiler.
 7. Include `student.h` into your `makefile`. In addition to step 4,
