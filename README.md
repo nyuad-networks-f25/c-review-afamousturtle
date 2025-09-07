@@ -45,12 +45,16 @@ Didn't add "status.h" as a dependency file in makefile.
 
 6. Warnings are a great tool to have when programming.
 Enable all the possible warnings you will ever get from your compiler.
+the warnings, the errors
+
 7. Include `student.h` into your `makefile`. In addition to step 4,
 also define a student. What is the error? What is the fix?
 
 ### Data Types
 
 1. What is a variable (take a minute to write it down)?
+Name given to a storage location.
+
 2. Each variable has a type in C. What are all the types defined in C?
 3. Create two files `sizeinfo.h` and `sizeinfo.c`. `sizeinfo.h` should
 expose a function `void system_sizes()`. This function

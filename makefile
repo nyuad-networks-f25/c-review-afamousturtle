@@ -1,5 +1,5 @@
 a.out: main.c status.h
-	gcc main.c
+	gcc main.c -Wall -Wextra -Werror
 
 # main: main.c
 # 	gcc --std c2x main.c -o main
