@@ -49,13 +49,60 @@ the warnings, the errors
 
 7. Include `student.h` into your `makefile`. In addition to step 4,
 also define a student. What is the error? What is the fix?
+Unused variable s1?
 
 ### Data Types
 
 1. What is a variable (take a minute to write it down)?
 Name given to a storage location.
+Chatgpt: A variable is like a named box in memory where you can store some data.
+
+
+** What is a pointer?
+A variable that stores the memory address.
 
 2. Each variable has a type in C. What are all the types defined in C?
+
+(1) integer type
+int
+short int
+long int
+long long int
+
+(2) floating-point type
+float
+double
+long double
+
+(3)
+char
+
+(4) derived types
+pointer: int *p;
+array: int numbers[10];
+function: int add(int a, int b);
+structure: 
+struct {
+    char *name;
+    int netid;
+} student_t;
+
+void
+
+const
+volatile: values that might change unexpectedly
+
+** Two ways of defining a string:
+(1) char str1[] = {'h', 'i'};
+Or char str1[] = "hi";
+
+Can be altered. eg: str1[1] = 'e';
+
+(2) char *str2 = 'hi';
+
+Cannot be altered. But you can assign the pointer to another string, eg: str2 = 'he';
+
+
 3. Create two files `sizeinfo.h` and `sizeinfo.c`. `sizeinfo.h` should
 expose a function `void system_sizes()`. This function
 
